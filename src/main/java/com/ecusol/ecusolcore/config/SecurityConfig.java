@@ -58,7 +58,12 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         // Permitir el origen de tu Frontend (Vite suele ser 5173)
-        configuration.setAllowedOrigins(List.of("http://localhost:5173", "http://localhost:3000"));
+        // AQUÍ AGREGAS TUS ORÍGENES PERMITIDOS
+        configuration.setAllowedOrigins(List.of(
+                "http://localhost:5173",                                      // Para pruebas locales
+                "http://18.217.178.188",                                      // Tu IP Pública (IMPORTANTE)
+                "http://ec2-18-217-178-188.us-east-2.compute.amazonaws.com"   // Tu DNS Público (Por si entras así)
+        ));
         // Permitir todos los métodos HTTP
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         // Permitir headers importantes (Authorization es clave para el JWT)
