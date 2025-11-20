@@ -1,9 +1,10 @@
 package com.ecusol.ecusolcore.features.ventanilla.dto;
+
 import java.math.BigDecimal;
 
-public record VentanillaOpDTO(
+public record InfoCuentaDTO(
         String numeroCuenta,
-        String cuentaDestino,
-        BigDecimal monto,
-        String descripcion
+        String titular,
+        BigDecimal saldo,
+        String tipo
 ) {}
