@@ -61,6 +61,8 @@ public class SecurityConfig {
         // AQUÍ AGREGAS TUS ORÍGENES PERMITIDOS
         configuration.setAllowedOrigins(List.of(
                 "http://localhost:5173",                                      // Para pruebas locales
+                "http://localhost:54698",
+                "http://localhost:50256",
                 "http://18.217.178.188",                                      // Tu IP Pública (IMPORTANTE)
                 "http://ec2-18-217-178-188.us-east-2.compute.amazonaws.com"   // Tu DNS Público (Por si entras así)
         ));

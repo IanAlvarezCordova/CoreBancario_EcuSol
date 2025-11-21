@@ -3,7 +3,7 @@ package com.ecusol.ecusolcore.features.ventanilla;
 import com.ecusol.ecusolcore.core.modelo.*;
 import com.ecusol.ecusolcore.core.repositorio.*;
 import com.ecusol.ecusolcore.features.shared.CoreTransaccionService;
-import com.ecusol.ecusolcore.features.ventanilla.dto.InfoCuentaDTO; // Importante
+import com.ecusol.ecusolcore.features.ventanilla.dto.InfoCuentaDTO;
 import com.ecusol.ecusolcore.features.ventanilla.dto.VentanillaOpDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class VentanillaService {
 
     @Autowired private CuentaRepository cuentaRepo;
-    @Autowired private ClientePersonaRepository clienteRepo; // Necesario para buscar nombres
+    @Autowired private ClientePersonaRepository clienteRepo;
     @Autowired private CoreTransaccionService coreService;
 
     // === NUEVO: VER SALDO Y DATOS ===
@@ -101,7 +101,7 @@ public class VentanillaService {
     private Transaccion crearTransaccion(String tipo, java.math.BigDecimal monto, String desc, Long sucursalId) {
         Transaccion t = new Transaccion();
         t.setTipo(tipo);
-        t.setCanal("CAJERO"); // Usamos CAJERO para cumplir con la BD
+        t.setCanal("CAJERO");
         t.setMonto(monto);
         t.setDescripcion(desc);
         t.setSucursalId(sucursalId);
