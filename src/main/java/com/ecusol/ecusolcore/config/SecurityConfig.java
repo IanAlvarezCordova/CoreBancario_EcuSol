@@ -85,6 +85,8 @@ public class SecurityConfig {
                 "http://localhost:5174",                                      // Vite Local (Alternativo)
                 "http://localhost:54698",                                     // Otros puertos locales
                 "http://localhost:50256",
+                "https://sitio-web-ecu-lndnh35ve-ians-projects-d721d4c3.vercel.app/",
+                "https://ecu-sol-ventanillas.vercel.app/",
                 "http://3.16.1.39", "https://3.16.1.39",                                     // BACKEND
                 "http://ec2-3-16-1-39.us-east-2.compute.amazonaws.com", "https://ec2-3-16-1-39.us-east-2.compute.amazonaws.com",
                 "http://18.217.59.120", "https://18.217.59.120",                                      // SITIOWEB
