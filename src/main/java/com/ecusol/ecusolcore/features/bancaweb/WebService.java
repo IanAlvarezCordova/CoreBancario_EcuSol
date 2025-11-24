@@ -1,3 +1,4 @@
+//features/bancaweb/WebService.java
 package com.ecusol.ecusolcore.features.bancaweb;
 
 import com.ecusol.ecusolcore.core.modelo.*;
@@ -8,7 +9,7 @@ import com.ecusol.ecusolcore.features.bancaweb.dto.MovimientoDTO;
 import com.ecusol.ecusolcore.features.bancaweb.dto.TransferenciaWebDTO;
 
 import java.util.Random;
-import com.ecusol.ecusolcore.features.shared.CoreTransaccionService;
+import com.ecusol.ecusolcore.features.transacciones.CoreTransaccionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

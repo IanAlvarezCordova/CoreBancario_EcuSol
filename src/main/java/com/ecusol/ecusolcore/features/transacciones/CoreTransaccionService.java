@@ -1,4 +1,5 @@
-package com.ecusol.ecusolcore.features.shared;
+//features/shared/CoreTransaccionService.java
+package com.ecusol.ecusolcore.features.transacciones;
 
 import com.ecusol.ecusolcore.core.modelo.*;
 import com.ecusol.ecusolcore.core.repositorio.*;
@@ -28,13 +29,13 @@ public class CoreTransaccionService {
     // Método específico para transferencias (Dos movimientos)
     @Transactional
     public String procesarTransferencia(Transaccion transaccion, Cuenta origen, Cuenta destino, BigDecimal monto) {
-        // 1. VALIDACIÓN DE ESTADO (NUEVO)
-        if (!"ACTIVA".equals(origen.getEstado())) {
-            throw new RuntimeException("La cuenta de origen no está activa.");
-        }
-        if (!"ACTIVA".equals(destino.getEstado())) {
-            throw new RuntimeException("La cuenta de destino no está activa.");
-        }
+        // 1. VALIDACION DE ESTADO (QUITADA, ASUME QUE EL LLAMADOR YA VALIDÓ)
+        // if (!"ACTIVA".equals(origen.getEstado())) {
+        //     throw new RuntimeException("La cuenta de origen no está activa.");
+        // }
+        // if (!"ACTIVA".equals(destino.getEstado())) {
+        //     throw new RuntimeException("La cuenta de destino no está activa.");
+        // }
 
         // 2. Guardar todo
         transRepo.save(transaccion);

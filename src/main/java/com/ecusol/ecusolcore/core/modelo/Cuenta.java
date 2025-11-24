@@ -39,5 +39,5 @@ public class Cuenta {
     @Column(name = "fecha_apertura")
     private LocalDate fechaApertura = LocalDate.now();  // ← NUEVO
 
-    private String estado = "ACTIVA";
+    private String estado = "ACTIVA"; // Estandarizado a ACTIVA (Femenino)
 }

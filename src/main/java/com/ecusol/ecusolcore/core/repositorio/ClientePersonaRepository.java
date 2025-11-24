@@ -10,5 +10,6 @@ public interface ClientePersonaRepository extends JpaRepository<ClientePersona, 
     boolean existsByUsuario(String usuario);
     boolean existsByEmail(String email);
 
-    Optional<Object> findByCedula(String cedula);
+    // CORREGIDO: Debe devolver la entidad tipada
+    Optional<ClientePersona> findByCedula(String cedula);
 }

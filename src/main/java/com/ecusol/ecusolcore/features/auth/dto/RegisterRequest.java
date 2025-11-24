@@ -1,3 +1,4 @@
+//features/auth/dto/RegisterRequest.java
 package com.ecusol.ecusolcore.features.auth.dto;
 
 // dto/RegisterRequest.java

@@ -20,16 +20,19 @@ public class AuthControlador {
     public ResponseEntity<String> register(@RequestBody RegisterRequest req) {
         return ResponseEntity.ok(authService.register(req));
     }
+    @PostMapping("/login/web")
+    public ResponseEntity<JwtResponse> loginWeb(@RequestBody LoginRequest req) {
+        // 1. Obtenemos solo el token del servicio (String)
+        String token = authService.loginCliente(req);
 
-    @PostMapping("/login")
-    public ResponseEntity<JwtResponse> login(@RequestBody LoginRequest req) {
-        String token = authService.login(req);
-        return ResponseEntity.ok(new JwtResponse(token));
+        // 2. Construimos la respuesta llenando los datos de sucursal manualmente
+        // "Banca Web" es informativo y el ID es null porque no aplica
+        return ResponseEntity.ok(new JwtResponse(token, "Banca Web", null));
     }
 
-    @PostMapping("/login-cajero")
-    public ResponseEntity<JwtResponse> loginCajero(@RequestBody com.ecusol.ecusolcore.features.auth.dto.LoginCajeroRequest req) {
-        String token = authService.loginCajero(req);
-        return ResponseEntity.ok(new JwtResponse(token));
+    @PostMapping("/login/ventanilla")
+    public ResponseEntity<JwtResponse> loginVentanilla(@RequestBody LoginRequest req) {
+        // AuthService ahora devuelve el objeto JwtResponse completo, no solo el string
+        return ResponseEntity.ok(authService.loginEmpleado(req));
     }
 }
