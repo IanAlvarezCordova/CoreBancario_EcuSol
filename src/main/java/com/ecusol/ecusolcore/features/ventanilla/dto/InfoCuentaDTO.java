@@ -1,3 +1,4 @@
+//features/ventanilla/dto/InfoCuentaDTO.java
 package com.ecusol.ecusolcore.features.ventanilla.dto;
 
 import java.math.BigDecimal;

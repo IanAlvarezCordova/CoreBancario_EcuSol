@@ -1,3 +1,4 @@
+// core/excepcion/GlobalExceptionHandler.java
 package com.ecusol.ecusolcore.core.exception;
 
 import org.springframework.http.HttpStatus;

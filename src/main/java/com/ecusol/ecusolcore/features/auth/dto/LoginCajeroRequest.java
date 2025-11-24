@@ -1,3 +1,4 @@
+//features/auth/dto/LoginCajeroRequest.java
 package com.ecusol.ecusolcore.features.auth.dto;
 
 public record LoginCajeroRequest(
