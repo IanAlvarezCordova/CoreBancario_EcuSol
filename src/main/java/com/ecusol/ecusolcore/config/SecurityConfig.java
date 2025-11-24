@@ -85,10 +85,13 @@ public class SecurityConfig {
                 "http://localhost:5174",                                      // Vite Local (Alternativo)
                 "http://localhost:54698",                                     // Otros puertos locales
                 "http://localhost:50256",
-                "http://18.217.178.188",                                      // Tu IP Pública Sitio Web
-                "http://ec2-18-217-178-188.us-east-2.compute.amazonaws.com",  // Tu DNS Público Sitio Web
-                "http://3.134.83.197",                                        // Tu IP Pública Backend (Swagger)
-                "http://ec2-3-134-83-197.us-east-2.compute.amazonaws.com"     // Tu DNS Público Backend
+                "http://3.16.1.39", "https://3.16.1.39",                                     // BACKEND
+                "http://ec2-3-16-1-39.us-east-2.compute.amazonaws.com", "https://ec2-3-16-1-39.us-east-2.compute.amazonaws.com",
+                "http://18.217.59.120", "https://18.217.59.120",                                      // SITIOWEB
+                "http://ec2-18-217-59-120.us-east-2.compute.amazonaws.com", "https://ec2-18-217-59-120.us-east-2.compute.amazonaws.com",
+                "http://3.144.129.57", "https://3.144.129.57", // VENTANILLA
+                "http://ec2-3-144-129-57.us-east-2.compute.amazonaws.com", "https://ec2-3-144-129-57.us-east-2.compute.amazonaws.com" // VENTANILLA
+
         ));
 
         // Permitir todos los métodos HTTP estándar
